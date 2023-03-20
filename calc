@@ -1,0 +1,128 @@
+package calc;
+
+public class Calculadora
+{
+	public int soma(int a, int b)
+	{	
+		return a+b;
+	}
+	
+	public static int sub(int a, int b)
+	{
+
+		return a-b;
+	}
+	
+	public static int mult(int a, int b)
+	{
+
+		return a*b;
+	}
+	
+	public static int div(int a, int b)
+	{
+		return a/b;
+	}
+	
+}
+
+
+ex2
+
+package ex2;
+
+public class Pessoa
+{
+	private String name;
+	private String age;
+	private String telefone;
+
+	public static void main(String[] args)
+	{
+		Pessoa person1=new Pessoa("ABC", "30", "1800");
+		Pessoa person2=new Pessoa("DEF", "50", "1200");
+		
+		System.out.println(person1.toString());
+		System.out.println(person2.getAge());
+		System.out.println(person1.getName());
+		System.out.println(person2.getTelefone());
+		System.out.println(person2.isOlder(person1));
+	}
+	
+	public Pessoa(String name, String age, String telefone)
+	{
+		this.name=name;
+		this.age=age;
+		this.telefone=telefone;
+	}
+	
+//	public Pessoa()
+//	{
+//		this.name="vtrgf";
+//		this.age="1234";
+//		this.telefone="vehrg";
+//	}
+	
+	public String getName()
+	{
+		return name;
+	}
+
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+	public int getAge()
+	{
+		int agei=Integer.parseInt(age);
+		return agei;
+	}
+
+	public void setAge(String age)
+	{
+		this.age = age;
+	}
+
+	public String toString()
+	{
+		return name+" "+age+" "+telefone;
+	}
+	
+	public String getTelefone()
+	{
+		return telefone;
+	}
+	
+	public void setTelefone (String phone)
+	{
+		this.telefone=phone;
+	}
+	
+	public boolean isOlder (Pessoa outraPessoa)
+	{
+		return (this.getAge()>outraPessoa.getAge());
+	}
+}
+// source -> generate getter and setters
+
+
+test
+
+package test;
+
+import calc.Calculadora;
+
+public class Exercicio51
+{
+	public static void main(String[] args)
+	{
+		Calculadora calc= new Calculadora();
+		System.out.println(calc.soma(6, 6));
+		
+		
+	}
+}
+
+
+
